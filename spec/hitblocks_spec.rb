@@ -5,7 +5,12 @@ RSpec.describe Hitblocks do
     expect(Hitblocks::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "has a base api path" do
+    expect(Hitblocks.api_base).not_to be nil
+  end
+
+  it "can set an api key" do
+    Hitblocks.api_key = "xxx-xxx-xxx"
+    expect(Hitblocks.api_key).to eq "xxx-xxx-xxx"
   end
 end

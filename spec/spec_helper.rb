@@ -3,6 +3,8 @@ require "hitblocks"
 require "rspec"
 require "simplecov"
 require "hitblocks_spec"
+require "webmock"
+require "vcr"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
