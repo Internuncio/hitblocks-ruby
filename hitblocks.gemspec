@@ -6,8 +6,8 @@ require "hitblocks/version"
 Gem::Specification.new do |spec|
   spec.name          = "hitblocks"
   spec.version       = Hitblocks::VERSION
-  spec.authors       = ["Nolan Tait"]
-  spec.email         = ["nolanjtait@gmail.com"]
+  spec.authors       = ["Hitblocks"]
+  spec.email         = ["admin@hitblocks.ai"]
 
   spec.summary       = %q{A API wrapper for Hitblocks.ai API.}
   spec.homepage      = "https://docs.hitblocks.ai"
@@ -33,4 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "simplecov"
+  spec.add_dependency "faraday", "~> 0.9"
 end
