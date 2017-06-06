@@ -1,10 +1,9 @@
 module Hitblocks
   class List
-    attr_reader :hitblocks, :items
+    attr_reader :data
 
     def initialize(data)
-      @hitblocks = data[:hitblocks]
-      @items = data[:items]
+      @data = data[:data]
     end
 
   end

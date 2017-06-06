@@ -31,7 +31,7 @@ RSpec.describe Hitblocks::Item do
       end
 
       it 'should return a list with all items' do
-        expect(described_class.list.items.first).to be_a Hitblocks::Item
+        expect(described_class.list.data.first).to be_a Hitblocks::Item
       end
     end
 
