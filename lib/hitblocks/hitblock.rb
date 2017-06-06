@@ -3,6 +3,7 @@ module Hitblocks
     include HTTParty
 
     attr_accessor :id
+    attr_reader :items
 
     class << self
       def retrieve(id = nil)
@@ -38,6 +39,7 @@ module Hitblocks
       @cost_per_item = params[:cost_per_item]
       @workers_per_item = params[:workers_per_item]
       @currency = params[:currency]
+      @items = params[:items]
     end
 
 
@@ -61,7 +63,8 @@ module Hitblocks
         created: parsed_response["created"],
         cost_per_item: parsed_response["cost_per_item"],
         workers_per_item: parsed_response["workers_per_item"],
-        currency: parsed_response["currency"]
+        currency: parsed_response["currency"],
+        items: construct_items(parsed_response["items"])
       )
     end
 
@@ -72,8 +75,23 @@ module Hitblocks
         list_items.push(self.send("construct_#{object["object"]}", object))
       end
       Hitblocks::List.new(
-        list_items
+        hitblocks: list_items
       )
+    end
+
+    def self.construct_items(item_list)
+      items = []
+      item_list.each do |item|
+        items.push(Hitblocks::Item.new(
+          id: item["id"],
+          type: item["type"],
+          created: item["created"],
+          cost: item["cost"],
+          currency: item["currency"],
+          status: item["status"]
+        ))
+      end
+      return items
     end
   end
 end

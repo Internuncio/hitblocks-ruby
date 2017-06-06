@@ -50,7 +50,7 @@ RSpec.describe Hitblocks::Hitblock do
     end
 
     it 'will return a list object with hitblocks' do
-      expect(described_class.list.data).to match [Hitblocks::Hitblock]
+      expect(described_class.list.hitblocks).to match [Hitblocks::Hitblock]
     end
   end
 

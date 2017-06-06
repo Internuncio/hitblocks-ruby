@@ -2,59 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://internuncio-prototype-staging.herokuapp.com/api/hitblocks
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Authorization:
-      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Tue, 06 Jun 2017 19:06:44 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept-Encoding
-      Etag:
-      - W/"334f616973fb59a59dd6de1f6a8359a3"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 7556971c-9230-4aca-aa1f-d4b5ecd68d51
-      X-Runtime:
-      - '0.089057'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: ASCII-8BIT
-      string: '{"object":"list","url":"/api/hitblocks","data":[{"object":"hitblock","id":1,"title":"untitled","description":"-","type":"imagetranscriptioninterface","created":1496536381,"cost_per_item":0.05,"workers_per_item":1,"currency":"usd","items":[{"object":"item","id":1,"type":"image","created":1496774726,"cost":0.05,"currency":"usd","status":"unprocessed"}]}]}'
-    http_version: 
-  recorded_at: Tue, 06 Jun 2017 19:06:41 GMT
-- request:
-    method: get
     uri: http://internuncio-prototype-staging.herokuapp.com/api/hitblocks/1
     body:
       encoding: US-ASCII
@@ -76,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 06 Jun 2017 19:06:45 GMT
+      - Tue, 06 Jun 2017 19:06:56 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -90,13 +37,13 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Etag:
-      - W/"e22607a7761331fed2cd0686e595c9c3"
+      - W/"36924fab3e364cc78f5b7a3ae9ff780e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 805f0759-b992-4b0d-93f1-9f8d58a11182
+      - 7e1bf30f-aa38-42fd-b576-0fb329585bcb
       X-Runtime:
-      - '0.079702'
+      - '0.154982'
       Transfer-Encoding:
       - chunked
       Via:
@@ -105,5 +52,58 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"object":"hitblock","id":1,"title":"untitled","description":"-","type":"imagetranscriptioninterface","created":1496536381,"cost_per_item":0.05,"workers_per_item":1,"currency":"usd","items":[{"object":"item","id":1,"type":"image","created":1496774726,"cost":0.05,"currency":"usd","status":"unprocessed"}]}'
     http_version: 
-  recorded_at: Tue, 06 Jun 2017 19:06:42 GMT
+  recorded_at: Tue, 06 Jun 2017 19:06:53 GMT
+- request:
+    method: get
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Jun 2017 19:25:45 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"6b118eb5c1ff848968e934917dcc9eb9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a6498067-bc0e-45a2-a583-20d2354e12fd
+      X-Runtime:
+      - '0.025370'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"object":"list","url":"/api/items","data":[{"object":"item","id":1,"type":"image","created":1496774726,"cost":0.05,"currency":"usd","status":"unprocessed","attributes":{"image_url":"https://upload.wikimedia.org/wikipedia/commons/0/0b/ReceiptSwiss.jpg"},"responses":[]}]}'
+    http_version: 
+  recorded_at: Tue, 06 Jun 2017 19:25:43 GMT
 recorded_with: VCR 3.0.3
