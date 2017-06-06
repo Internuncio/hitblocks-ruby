@@ -65,6 +65,23 @@ RSpec.describe Hitblocks::Item do
   end
 
   describe 'POST .delete' do
+    context 'when the deletion is successful' do
+      it 'should return the deleted hash' do
+        item = Hitblocks::Item.new(id: 2)
+        response = item.delete
+
+        expect(response["deleted"]).to eq true
+      end
+    end
+
+    context 'when the deletion is unsuccessful' do
+      it 'should return the deleted hash' do
+        item = Hitblocks::Item.new(id: 3)
+        response = item.delete
+
+        expect(response["deleted"]).to eq false
+      end
+    end
   end
 
   describe 'POST .post' do

@@ -48,6 +48,14 @@ module Hitblocks
       end
     end
 
+    def delete
+      self.class.base_uri Hitblocks.api_base
+      response = self.class.delete("/items/#{self.id}",
+                           basic_auth: { username: Hitblocks.api_key }
+                          )
+
+      return response
+    end
 
     private
 

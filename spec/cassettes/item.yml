@@ -160,6 +160,153 @@ http_interactions:
   recorded_at: Tue, 06 Jun 2017 21:54:35 GMT
 - request:
     method: get
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/items/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Jun 2017 22:22:58 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"662f66ee256ad08af12a67a1506ffb45"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - de3709f1-516f-4ed4-b4a6-3205c70a4bb4
+      X-Runtime:
+      - '0.037920'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"object":"item","id":2,"type":"image","created":1496785413,"cost":0.05,"currency":"usd","status":"unprocessed","attributes":{"image_url":"http://www.images.com/my-image.jpg"},"responses":[]}'
+    http_version: 
+  recorded_at: Tue, 06 Jun 2017 22:22:56 GMT
+- request:
+    method: delete
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/items/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Jun 2017 22:22:59 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"740173504af35b31c6d1483d0c8db1ef"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b8acbd61-52de-4f0a-b3e4-8f19f96acea7
+      X-Runtime:
+      - '0.044301'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"deleted":true,"id":2}'
+    http_version: 
+  recorded_at: Tue, 06 Jun 2017 22:22:56 GMT
+- request:
+    method: delete
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/items/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Jun 2017 22:26:39 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Request-Id:
+      - 76c12da4-9269-4261-b2e7-60192b978885
+      X-Runtime:
+      - '0.017793'
+      Content-Length:
+      - '34'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"deleted":false,"id":3}'
+    http_version: 
+  recorded_at: Tue, 06 Jun 2017 22:26:36 GMT
+- request:
+    method: get
     uri: http://internuncio-prototype-staging.herokuapp.com/api/items/1
     body:
       encoding: US-ASCII
@@ -181,7 +328,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 06 Jun 2017 21:55:51 GMT
+      - Tue, 06 Jun 2017 22:22:58 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -195,20 +342,20 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Etag:
-      - W/"796a1a5cec4c1805f45ab55e1a96ab4f"
+      - W/"662f66ee256ad08af12a67a1506ffb45"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 75935ec7-332b-4a27-af69-22ccb18cc830
+      - de3709f1-516f-4ed4-b4a6-3205c70a4bb4
       X-Runtime:
-      - '0.032942'
+      - '0.037920'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: ASCII-8BIT
-      string: '{"object":"item","id":1,"type":"image","created":1496774726,"cost":0.05,"currency":"usd","status":"unprocessed","attributes":{"image_url":"https://upload.wikimedia.org/wikipedia/commons/0/0b/ReceiptSwiss.jpg"},"responses":[]}'
+      string: '{"object":"item","id":1,"type":"image","created":1496785413,"cost":0.05,"currency":"usd","status":"unprocessed","attributes":{"image_url":"http://www.images.com/my-image.jpg"},"responses":[]}'
     http_version: 
-  recorded_at: Tue, 06 Jun 2017 21:55:49 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Tue, 06 Jun 2017 22:22:56 GMT
+
