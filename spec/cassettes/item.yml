@@ -106,4 +106,98 @@ http_interactions:
       string: '{"object":"list","url":"/api/items","data":[{"object":"item","id":1,"type":"image","created":1496774726,"cost":0.05,"currency":"usd","status":"unprocessed","attributes":{"image_url":"https://upload.wikimedia.org/wikipedia/commons/0/0b/ReceiptSwiss.jpg"},"responses":[]}]}'
     http_version: 
   recorded_at: Tue, 06 Jun 2017 19:25:43 GMT
+- request:
+    method: get
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/item/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Jun 2017 19:55:57 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Request-Id:
+      - 87a5184f-caed-4e45-95e0-701947fbd908
+      X-Runtime:
+      - '0.002515'
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 06 Jun 2017 19:55:55 GMT
+- request:
+    method: get
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/items/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Jun 2017 19:57:40 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"a417594631c47696da5a31364480b7af"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 940e1825-6ac5-4115-ac29-9aa39a8b4adc
+      X-Runtime:
+      - '0.023988'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"object":"item","id":1,"type":"image","created":1496774726,"cost":0.05,"currency":"usd","status":"unprocessed","attributes":{"image_url":"https://upload.wikimedia.org/wikipedia/commons/0/0b/ReceiptSwiss.jpg"},"responses":[]}'
+    http_version: 
+  recorded_at: Tue, 06 Jun 2017 19:57:38 GMT
 recorded_with: VCR 3.0.3

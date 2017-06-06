@@ -43,6 +43,22 @@ RSpec.describe Hitblocks::Item do
   end
 
   describe 'GET .retrieve' do
+    before do
+      VCR.insert_cassette 'item', record: :new_episodes
+      Hitblocks.api_key = "47f2a1acdccbd18e4e8c141934955371"
+    end
+
+    after do
+      VCR.eject_cassette
+    end
+
+    it 'should return an item' do
+      expect(described_class.retrieve("1")).to be_a Hitblocks::Item
+    end
+
+    it 'should raise an error without an ID parameter', vcr: true do
+      expect{described_class.retrieve}.to raise_error(Hitblocks::MissingParametersError)
+    end
   end
 
   describe 'POST .create' do

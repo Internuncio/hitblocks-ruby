@@ -20,6 +20,16 @@ module Hitblocks
 
         Hitblocks.construct_from(response)
       end
+
+      def retrieve(id = nil)
+        self.raise_missing_parameters unless id
+        self.base_uri Hitblocks.api_base
+        response = self.get("/items/#{id}",
+                            basic_auth: { username: Hitblocks.api_key }
+                           )
+
+        Hitblocks.construct_from(response)
+      end
     end
 
 
