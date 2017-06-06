@@ -1,6 +1,15 @@
 require 'spec_helper'
 
 RSpec.describe Hitblocks::Hitblock do
+  before do
+    VCR.insert_cassette 'hitblock', record: :new_episodes
+    Hitblocks.api_key = "47f2a1acdccbd18e4e8c141934955371"
+  end
+
+  after do
+    VCR.eject_cassette
+  end
+
   describe 'initialization' do
     it 'must include HTTParty' do
       expect(described_class.ancestors).to include(HTTParty)
@@ -17,15 +26,6 @@ RSpec.describe Hitblocks::Hitblock do
 
 
   describe 'GET .retrieve' do
-    before do
-      VCR.insert_cassette 'hitblock', record: :new_episodes
-      Hitblocks.api_key = "47f2a1acdccbd18e4e8c141934955371"
-    end
-
-    after do
-      VCR.eject_cassette
-    end
-
     it 'will raise an error without an ID parameter', vcr: true do
       expect{described_class.retrieve}.to raise_error(Hitblocks::MissingParametersError)
     end
@@ -36,15 +36,6 @@ RSpec.describe Hitblocks::Hitblock do
   end
 
   describe 'GET .list' do
-    before do
-      VCR.insert_cassette 'hitblock', record: :new_episodes
-      Hitblocks.api_key = "47f2a1acdccbd18e4e8c141934955371"
-    end
-
-    after do
-      VCR.eject_cassette
-    end
-
     it 'will return a list object' do
       expect(described_class.list).to be_a Hitblocks::List
     end
