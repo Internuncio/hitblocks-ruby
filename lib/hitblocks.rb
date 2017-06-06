@@ -7,6 +7,7 @@ require "json"
 require "hitblocks/version"
 require "hitblocks/errors"
 require "hitblocks/hitblock"
+require "hitblocks/list"
 
 module Hitblocks
 

@@ -53,4 +53,57 @@ http_interactions:
       string: '{"object":"hitblock","id":1,"title":"untitled","description":"-","type":"imagetranscriptioninterface","created":1496536381,"cost_per_item":0.05,"workers_per_item":1,"currency":"usd"}'
     http_version: 
   recorded_at: Tue, 06 Jun 2017 01:44:41 GMT
+- request:
+    method: get
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/hitblocks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Jun 2017 06:06:59 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"6d16b4d4c3f24a65c6096328624934ad"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3f71b628-38f6-430c-8592-55754ce67c96
+      X-Runtime:
+      - '0.179896'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"object":"list","url":"/api/hitblocks","data":[{"object":"hitblock","id":1,"title":"untitled","description":"-","type":"imagetranscriptioninterface","created":1496536381,"cost_per_item":0.05,"workers_per_item":1,"currency":"usd"}]}'
+    http_version: 
+  recorded_at: Tue, 06 Jun 2017 06:06:55 GMT
 recorded_with: VCR 3.0.3

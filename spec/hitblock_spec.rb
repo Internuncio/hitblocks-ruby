@@ -34,4 +34,24 @@ RSpec.describe Hitblocks::Hitblock do
       expect(described_class.retrieve("1")).to be_a Hitblocks::Hitblock
     end
   end
+
+  describe 'GET .list' do
+    before do
+      VCR.insert_cassette 'hitblock', record: :new_episodes
+      Hitblocks.api_key = "47f2a1acdccbd18e4e8c141934955371"
+    end
+
+    after do
+      VCR.eject_cassette
+    end
+
+    it 'will return a list object' do
+      expect(described_class.list).to be_a Hitblocks::List
+    end
+
+    it 'will return a list object with hitblocks' do
+      expect(described_class.list.data).to match [Hitblocks::Hitblock]
+    end
+  end
+
 end
