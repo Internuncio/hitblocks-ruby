@@ -30,6 +30,22 @@ module Hitblocks
 
         Hitblocks.construct_from(response)
       end
+
+      def create(params)
+        self.base_uri Hitblocks.api_base
+        payload = Hash.new
+        payload[:item] = params.reject {|x| x == :hitblock}
+        response = self.post("/hitblocks/#{params[:hitblock].id}/items",
+                             body: payload.to_json,
+                             headers: {
+                              'Content-Type' => 'application/json',
+                              'Accept' => 'application/json'
+                            },
+                             basic_auth: { username: Hitblocks.api_key }
+                            )
+
+        Hitblocks.construct_from(response)
+      end
     end
 
 

@@ -107,46 +107,57 @@ http_interactions:
     http_version: 
   recorded_at: Tue, 06 Jun 2017 19:25:43 GMT
 - request:
-    method: get
-    uri: http://internuncio-prototype-staging.herokuapp.com/api/item/1
+    method: post
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/hitblocks/1/items
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: '{"item":{"type":"image","image_url":"http://www.images.com/my-image.jpg","description":"My
+        image from a personal website"}}'
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/json
       Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      - application/json
       Authorization:
       - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 201
+      message: Created
     headers:
       Server:
       - Cowboy
       Date:
-      - Tue, 06 Jun 2017 19:55:57 GMT
+      - Tue, 06 Jun 2017 21:54:39 GMT
       Connection:
       - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
-      - text/html; charset=utf-8
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"238e5f053ae24500c5018f0ecd68a0da"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 87a5184f-caed-4e45-95e0-701947fbd908
+      - cf99c982-6723-4b79-8968-903b95a70ec0
       X-Runtime:
-      - '0.002515'
-      Content-Length:
-      - '0'
+      - '0.194892'
+      Transfer-Encoding:
+      - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: ''
+      string: '{"object":"item","id":3,"type":"image","created":1496786079,"cost":0.05,"currency":"usd","status":"unprocessed","attributes":{"image_url":"http://www.images.com/my-image.jpg"},"responses":[]}'
     http_version: 
-  recorded_at: Tue, 06 Jun 2017 19:55:55 GMT
+  recorded_at: Tue, 06 Jun 2017 21:54:35 GMT
 - request:
     method: get
     uri: http://internuncio-prototype-staging.herokuapp.com/api/items/1
@@ -170,7 +181,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 06 Jun 2017 19:57:40 GMT
+      - Tue, 06 Jun 2017 21:55:51 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -184,13 +195,13 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Etag:
-      - W/"a417594631c47696da5a31364480b7af"
+      - W/"796a1a5cec4c1805f45ab55e1a96ab4f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 940e1825-6ac5-4115-ac29-9aa39a8b4adc
+      - 75935ec7-332b-4a27-af69-22ccb18cc830
       X-Runtime:
-      - '0.023988'
+      - '0.032942'
       Transfer-Encoding:
       - chunked
       Via:
@@ -199,5 +210,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"object":"item","id":1,"type":"image","created":1496774726,"cost":0.05,"currency":"usd","status":"unprocessed","attributes":{"image_url":"https://upload.wikimedia.org/wikipedia/commons/0/0b/ReceiptSwiss.jpg"},"responses":[]}'
     http_version: 
-  recorded_at: Tue, 06 Jun 2017 19:57:38 GMT
+  recorded_at: Tue, 06 Jun 2017 21:55:49 GMT
 recorded_with: VCR 3.0.3

@@ -53,6 +53,15 @@ RSpec.describe Hitblocks::Item do
   end
 
   describe 'POST .create' do
+    it 'should return a new item' do
+      hitblock = Hitblocks::Hitblock.retrieve("1")
+      item = described_class.create(
+          type: "image",
+          hitblock: hitblock,
+          image_url: 'http://www.images.com/my-image.jpg',
+          description: "My image from a personal website")
+      expect(item).to be_a Hitblocks::Item
+    end
   end
 
   describe 'POST .delete' do
