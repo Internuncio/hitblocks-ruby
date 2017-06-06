@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/hitblocks/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Jun 2017 01:44:44 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"baaf7b79836bd653159f74a13c24bc97"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1f059463-c0fc-4354-9ab1-05439eef68f9
+      X-Runtime:
+      - '0.116191'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"object":"hitblock","id":1,"title":"untitled","description":"-","type":"imagetranscriptioninterface","created":1496536381,"cost_per_item":0.05,"workers_per_item":1,"currency":"usd"}'
+    http_version: 
+  recorded_at: Tue, 06 Jun 2017 01:44:41 GMT
+recorded_with: VCR 3.0.3

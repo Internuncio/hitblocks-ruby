@@ -5,6 +5,9 @@ require "simplecov"
 require "hitblocks_spec"
 require "webmock"
 require "vcr"
+require "byebug"
+require "pry"
+require "pry-byebug"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
