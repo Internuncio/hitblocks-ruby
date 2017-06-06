@@ -57,6 +57,15 @@ module Hitblocks
       return response
     end
 
+    def post
+      self.class.base_uri Hitblocks.api_base
+      response = self.class.post("/items/#{self.id}/post",
+                                 basic_auth: { username: Hitblocks.api_key }
+                                )
+
+      Hitblocks.construct_from(response)
+    end
+
     private
 
     def self.raise_missing_parameters

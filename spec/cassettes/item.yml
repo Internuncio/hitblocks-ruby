@@ -358,4 +358,86 @@ http_interactions:
       string: '{"object":"item","id":1,"type":"image","created":1496785413,"cost":0.05,"currency":"usd","status":"unprocessed","attributes":{"image_url":"http://www.images.com/my-image.jpg"},"responses":[]}'
     http_version: 
   recorded_at: Tue, 06 Jun 2017 22:22:56 GMT
-
+- request:
+    method: post
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/items/3/post
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Jun 2017 22:42:13 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Request-Id:
+      - d24bbfc5-da14-49f6-bbaa-2780940b6d45
+      X-Runtime:
+      - '0.142468'
+      Content-Length:
+      - '34'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found"}'
+    http_version: 
+  recorded_at: Tue, 06 Jun 2017 22:42:10 GMT
+- request:
+    method: post
+    uri: http://internuncio-prototype-staging.herokuapp.com/api/items/2/post
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic NDdmMmExYWNkY2NiZDE4ZTRlOGMxNDE5MzQ5NTUzNzE6
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Jun 2017 22:58:27 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Request-Id:
+      - 7d6e6aac-9d32-4117-9cc9-120395d23e0d
+      X-Runtime:
+      - '0.010543'
+      Content-Length:
+      - '34'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"object":"HIT","url":"http://workersandbox.mturk.com/mturk/preview?groupId=327KZ3ZBR3XIQKD6T3SZV2S0FVTPJT","service":"Amazon","status":"published","created":"1496791131","item":{"object":"item","id":604,"type":"image","created":1496790645,"cost":0.05,"currency":"usd","status":"unprocessed"}}'
+    http_version: 
+  recorded_at: Tue, 06 Jun 2017 22:58:24 GMT
+recorded_with: VCR 3.0.3

@@ -85,5 +85,20 @@ RSpec.describe Hitblocks::Item do
   end
 
   describe 'POST .post' do
+    context 'when the posting is successful' do
+      it 'should return the HIT' do
+        item = Hitblocks::Item.new(id: 2)
+
+        expect(item.post).to be_a Hitblocks::HIT
+      end
+    end
+
+    context 'when the posting is unsuccessful' do
+      it 'should return an error' do
+        item = Hitblocks::Item.new(id: 3)
+
+        expect(item.post).to be_a Hitblocks::Error
+      end
+    end
   end
 end
