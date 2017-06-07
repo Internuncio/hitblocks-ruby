@@ -18,6 +18,10 @@ module Hitblocks
 
   class << self
     attr_accessor :api_base, :api_key
+
+    def api_key
+      @api_key ||= raise Hitblocks::APIKeyNotSet, "API key is not set. Use Hitblocks.api_key = 'xxxxxxxxxxxx' to set it."
+    end
   end
 
   def self.construct_HIT(parsed_response)
@@ -41,8 +45,12 @@ module Hitblocks
   end
 
   def self.construct_error(parsed_response)
+    error = parsed_response["error"]
+    if error.nil?
+      error = parsed_response["errors"]
+    end
     Hitblocks::Error.new(
-      error: parsed_response["error"],
+      error: error,
       status: parsed_response["status"]
     )
   end
